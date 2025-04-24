@@ -8,7 +8,7 @@
 const int ITERATIONS = 1;
 const char* FILENAME = "output_log.txt";
 
-// Option 1: printf() - Returns execution time in nanoseconds as string
+// Test 1: printf() - Returns execution time in nanoseconds as string
 std::string test_printf() {
     printf("\nprintf() Test...>\n");
     auto start = std::chrono::high_resolution_clock::now();
@@ -20,7 +20,7 @@ std::string test_printf() {
     return std::to_string(duration.count()) + " ns ";
 }
 
-// Option 2: stdout (using write) - Returns execution time in nanoseconds as string
+// Test 2: stdout (using write) - Returns execution time in nanoseconds as string
 std::string test_stdout() {
     std::cout << "\ncout Test...>\n";
     auto start = std::chrono::high_resolution_clock::now();
@@ -33,7 +33,7 @@ std::string test_stdout() {
     return std::to_string(duration.count()) + " ns ";
 }
 
-// Option 3: No output - Returns execution time in nanoseconds as string
+// Test 3: No output - Returns execution time in nanoseconds as string
 std::string test_no_output() {
     std::cout << "\nNo Output Test...>\n";
     auto start = std::chrono::high_resolution_clock::now();
@@ -46,7 +46,7 @@ std::string test_no_output() {
     return std::to_string(duration.count()) + " ns ";
 }
 
-// Option 4: fprintf to file (C-style) - Returns execution time in nanoseconds as string
+// Test 4: fprintf to file (C-style) - Returns execution time in nanoseconds as string
 std::string test_fprintf_file() {
     FILE* fp = fopen(FILENAME, "w");
     if (!fp) {
@@ -63,7 +63,7 @@ std::string test_fprintf_file() {
     return std::to_string(duration.count()) + " ns ";
 }
 
-// Option 5: std::ofstream to file (C++-style) - Returns execution time in nanoseconds as string
+// Test 5: std::ofstream to file (C++-style) - Returns execution time in nanoseconds as string
 std::string test_ofstream_file() {
     std::ofstream outfile(FILENAME);
     if (!outfile.is_open()) {
