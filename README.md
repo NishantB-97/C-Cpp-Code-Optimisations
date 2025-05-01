@@ -82,7 +82,7 @@ MIT
 <div style="text-align: center">⁂</div>
 
 [^1]: Screenshot-from-2025-05-01-20-43-21.jpg
-<img src="https://r2cdn.perplexity.ai/pplx-full-logo-primary-dark%402x.png" class="logo" width="120"/>
+
 
 # C++ Performance Benchmarks
 
