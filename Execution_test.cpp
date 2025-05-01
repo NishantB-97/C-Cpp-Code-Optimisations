@@ -39,7 +39,7 @@ std::string test_no_output() {
     auto start = std::chrono::high_resolution_clock::now();
     int sum = 0;
     for (int i = 0; i < ITERATIONS; ++i) {
-        sum += i; // Perform some operation instead of output
+        sum += i; // Do Something instead of output
     }
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
